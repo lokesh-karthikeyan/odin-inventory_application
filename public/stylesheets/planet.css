@@ -1,0 +1,47 @@
+.planets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2em;
+  width: 100%;
+}
+
+.add-planet,
+.planet-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  border: 0.2em solid var(--dbz-orange);
+  border-radius: 0.5em;
+  padding: 1em;
+  text-align: center;
+  background-color: var(--dbz-dark);
+  color: var(--dbz-yellow);
+  aspect-ratio: 1 / 1;
+  anchor-name: --card-anchor;
+  position: relative;
+}
+
+.add-planet {
+  font-weight: bold;
+  font-size: 1.2em;
+  background: var(--dbz-yellow);
+  color: var(--dbz-dark);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.delete-planet img {
+  width: 25px;
+  cursor: pointer;
+}
+
+.delete-planet {
+  position: absolute;
+  background: var(--dbz-orange);
+  position-anchor: --card-anchor;
+  top: 1em;
+  right: 1em;
+  padding: 0.3em;
+  border-radius: 50%;
+}

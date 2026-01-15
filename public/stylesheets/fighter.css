@@ -1,0 +1,71 @@
+.fighters-table {
+  display: grid;
+  gap: 1em;
+  width: 100%;
+}
+
+.fighter-profile {
+  background: var(--dbz-dark);
+  color: var(--dbz-yellow);
+  border: double 0.2em var(--dbz-orange);
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  border-radius: 0.5em;
+  padding: 1em;
+}
+
+.image-container.fighter {
+  max-width: 250px;
+  max-height: 250px;
+  aspect-ration: 1 / 1;
+}
+
+.fighter-details {
+  background: color-mix(in srgb, var(--dbz-dark) 100%, white 5%);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  justify-content: center;
+  gap: 1.5em;
+  padding-inline: 1.2em;
+  border-radius: 0.4em;
+}
+
+.add-fighter {
+  background: var(--dbz-dark);
+  color: var(--dbz-yellow);
+  border: double 0.2em var(--dbz-orange);
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  border-radius: 0.5em;
+  padding: 1em;
+}
+
+.delete-fighter {
+  padding: 1em;
+  background: var(--dbz-orange);
+  color: var(--dbz-black);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5em;
+  border: solid 0.1em var(--dbz-yellow);
+  transition: color 0.3s;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.delete-fighter img {
+  aspect-ratio: 1 / 1;
+  max-width: 50px;
+}
+
+.delete-fighter:hover {
+  color: var(--dbz-blue);
+}
