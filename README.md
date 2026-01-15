@@ -1,15 +1,7 @@
-# odin-inventory_application
+# The Odin Project - Inventory Application
 
-To install dependencies:
+A Simple inventory management app (in a **Dragon Ball** style) built with `NodeJS`, `Express`, and `PostgreSQL`.
 
-```bash
-bun install
-```
+## Credits
 
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.2.20. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+Thanks to [Xtrafondos](https://www.xtrafondos.com/en/), [Clean Png](https://www.cleanpng.com/) and [Google Fonts](https://fonts.google.com/) for providing fonts & images for the site.
