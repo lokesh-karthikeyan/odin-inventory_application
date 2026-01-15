@@ -1,0 +1,24 @@
+<%- include('../partials/header.ejs', { title }) %>
+
+<main>
+  <div class="fighters-table">
+    <a href='/fighters/create' class='add-fighter'>+ Add Fighter</a>
+
+    <% fighters.forEach((fighter) => { %>
+      <div class='fighter-profile'>
+        <div class='image-container fighter'><img src="<%= fighter.image_url %>" alt="<%= fighter.name %>" /></div>
+        <div class='fighter-details'>
+          <p>Name:   <%= fighter.name %></p>
+          <p>Planet: <%= fighter.planet_name %></p>
+        </div>
+        <a href='/fighters/delete/<%= fighter.id %>' class='delete-fighter'>
+          <img src='https://img.icons8.com/?size=100&id=68064&format=png&color=000000' alt='Trash icon' />
+        </a>
+      </div>
+    <% }) %>
+  </div>
+</main>
+
+<script src="/js/fighter.js"></script>
+
+<%- include('../partials/footer.ejs') %>

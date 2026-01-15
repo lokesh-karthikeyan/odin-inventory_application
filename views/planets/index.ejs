@@ -1,0 +1,20 @@
+<%- include('../partials/header.ejs', { title }) %>
+
+<main>
+  <div class="planets-grid">
+    <a href='planets/create' class='add-planet'>+ Add Planet</a>
+
+    <% planets.forEach((planet) => { %>
+      <div class='planet-box'>
+        <p><%= planet.name %></p>
+        <a href='/planets/delete/<%= planet.id %>' class='delete-planet'>
+          <img src='https://img.icons8.com/?size=100&id=68064&format=png&color=000000' alt='Trash icon' />
+        </a>
+      </div>
+    <% }) %>
+  </div>
+</main>
+
+<script src="/js/planet.js"></script>
+
+<%- include('../partials/footer.ejs') %>
