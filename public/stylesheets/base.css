@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+
+:root {
+  --dbz-orange: #ff6600;
+  --dbz-yellow: #ffeb3b;
+  --dbz-blue: #2196f3;
+  --dbz-black: #000;
+  --dbz-white: #fff;
+  --dbz-dark: #111;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Macondo', cursive;
+  background-color: var(--dbz-black);
+  color: var(--dbz-white);
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: var(--dbz-orange);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  color: var(--dbz-yellow);
+  margin: 0;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--dbz-white);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--dbz-blue);
+}
+
+main {
+  flex: 1;
+  padding: 4rem 2rem;
+  text-align: center;
+  background-image: url('/images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main h2 {
+  color: var(--dbz-yellow);
+  text-shadow: 2px 2px 4px var(--dbz-black);
+}
+
+main p {
+  color: var(--dbz-blue);
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 3px var(--dbz-black);
+}
+
+footer {
+  background-color: var(--dbz-orange);
+  text-align: center;
+  padding: 1rem;
+  color: var(--dbz-white);
+}
+
+.error-messages {
+  color: var(--dbz-orange);
+  padding-inline: 20px;
+  text-align: left;
+  margin-block: 1em;
+
+  ul { padding: 0; }
+}
