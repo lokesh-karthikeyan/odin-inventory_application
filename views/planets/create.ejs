@@ -1,0 +1,26 @@
+<%- include('../partials/header.ejs', { title }) %>
+
+<main>
+  <form class="planet-form" action="/planets/create" method="POST">
+    <h1>Create Planet</h1>
+
+    <div class="form-group">
+      <label for="name">Planet Name:</label>
+      <input type="text" id="name" name="name" placeholder="Earth" required />
+    </div>
+
+    <% if (locals.errors && errors.length > 0) { %>
+      <div class="error-messages">
+        <ul>
+          <% errors.forEach((error) => { %>
+            <li><%= error.msg %></li>
+          <% }) %>
+        </ul>
+      </div>
+    <% } %>
+
+    <button type="submit">Add Planet</button>
+  </form>
+</main>
+
+<%- include('../partials/footer.ejs') %>

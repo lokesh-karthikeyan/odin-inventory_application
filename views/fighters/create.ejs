@@ -1,0 +1,41 @@
+<%- include('../partials/header.ejs', { title }) %>
+
+<main>
+  <form action="/fighters/create" method="POST" enctype="multipart/form-data" class="fighter-form">
+    <h1>Create Fighter</h1>
+    
+    <div class="form-group">
+      <label for="name">Fighter Name:</label>
+      <input type="text" id="name" name="name" placeholder="Mr. Satan" required />
+    </div>
+
+    <div class="form-group">
+      <label for="image_url">Image:</label>
+      <input type="file" id="image_url" name="image_url" accept="image/*" required />
+    </div>
+
+    <div class="form-group">
+      <label for="planet_id">Planet:</label>
+      <select id="planet_id" name="planet_id" required>
+        <option value="">-- Select a planet --</option>
+        <% planets.forEach((planet) => { %>
+          <option value="<%= planet.id %>"><%= planet.name %></option>
+        <% }) %>
+      </select>
+    </div>
+
+    <% if (locals.errors && errors.length > 0) { %>
+      <div class="error-messages">
+        <ul>
+          <% errors.forEach((error) => { %>
+            <li><%= error.msg %></li>
+          <% }) %>
+        </ul>
+      </div>
+    <% } %>
+
+    <button type="submit">Create Fighter</button>
+  </form>
+</main>
+
+<%- include('../partials/footer.ejs') %>
