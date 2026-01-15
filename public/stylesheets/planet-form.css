@@ -1,0 +1,59 @@
+.planet-form {
+  background-color: var(--dbz-dark);
+  border: 2px solid var(--dbz-orange);
+  color: var(--dbz-blue);
+  padding: 20px;
+  border-radius: 8px;
+  width: 500px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  @media (max-width: 500px) {
+    .planet-form {
+      width: 80%;
+    }
+  }
+}
+
+.planet-form h1 {
+  color: var(--dbz-orange);
+  background: var(--dbz-black);
+  text-align: center;
+  border-radius: 0.2em;
+  margin-bottom: 20px;
+}
+
+.planet-form .form-group {
+  margin-bottom: 15px;
+}
+
+.planet-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: var(--dbz-blue);
+  text-align: left;
+}
+
+.planet-form input,
+.planet-form button {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--dbz-orange);
+  border-radius: 4px;
+  background-color: #fff;
+  color: var(--dbz-dark);
+}
+
+.planet-form button {
+  background-color: var(--dbz-orange);
+  color: var(--dbz-dark);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.planet-form button:hover {
+  background-color: var(--dbz-blue);
+  color: #fff;
+}
