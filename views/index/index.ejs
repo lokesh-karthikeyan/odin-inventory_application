@@ -1,0 +1,16 @@
+<%- include('../partials/header.ejs', { title }) %>
+
+<main>
+  <div class="fighters-grid">
+    <% fighters.forEach((fighter) => { %>
+      <div class="fighter-card">
+        <div class="image-container">
+          <img src="<%= fighter.image_url %>" alt="<%= fighter.name %>">
+        </div>
+        <h3><%= fighter.name %></h3>
+      </div>
+    <% }) %>
+  </div>
+</main>
+
+<%- include('../partials/footer.ejs') %>
